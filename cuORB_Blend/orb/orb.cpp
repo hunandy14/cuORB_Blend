@@ -689,7 +689,7 @@ ORB::warpData ORB_Homography(const ImgData& img1, const ImgData& img2) {
 	
 	t0.print("ORB::all run time");
 	// RANSAC ³s½u¹Ï
-	keyPt_drawMatchLine(img1, key1, img2, key2, "__RANSACmatchImg.bmp");
+	//keyPt_drawMatchLine(img1, key1, img2, key2, "__RANSACmatchImg.bmp");
 	return warpdata;
 }
 

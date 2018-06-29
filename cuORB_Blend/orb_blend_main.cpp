@@ -13,7 +13,7 @@ int main(int argc, char const *argv[]) {
 	string name1, name2;
 	/*======================´ú¸ê==========================*/
 	//name1 = "kanna.bmp", name2 = "kanna90.bmp"; // 90«×´ú¸Õ
-	name1 = "ball_01.bmp", name2 = "ball_02.bmp";
+	//name1 = "ball_01.bmp", name2 = "ball_02.bmp";
 	name1 = "sc02.bmp", name2 = "sc03.bmp";
 	//name1 = "data/DSC_2936.bmp", name2 = "data/DSC_2937.bmp";
 	//name1 = "data/DSC_2938.bmp", name2 = "data/DSC_2939.bmp";
@@ -38,7 +38,7 @@ int main(int argc, char const *argv[]) {
 	t1.start();
 	LapBlender(blend, img1, img2, w.ft, w.pt.x, w.pt.y);
 	t1.print("  LapBlender");
-	t0.print("@ ALL TIME");
+	t0.print("############################################## ALL TIME");
 
 	blend.bmp("__blend.bmp");
 
