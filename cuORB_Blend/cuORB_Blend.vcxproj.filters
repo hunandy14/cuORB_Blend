@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="orb">
+      <UniqueIdentifier>{d5f62823-1962-4859-ad0d-8ae5ed5e2449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LapBlend">
+      <UniqueIdentifier>{17b8e488-4193-4658-8b2f-7dee96aff50d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="orb\LATCH.h">
+      <Filter>orb</Filter>
+    </ClInclude>
+    <ClInclude Include="orb\orb.hpp">
+      <Filter>orb</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenBMP\OpenBMP.hpp" />
+    <ClInclude Include="LapBlend\LapBlend.hpp">
+      <Filter>LapBlend</Filter>
+    </ClInclude>
+    <ClInclude Include="cubilinear\cubilinear.hpp" />
+    <ClInclude Include="CudaMem\CudaMem.cuh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="orb\orb.cpp">
+      <Filter>orb</Filter>
+    </ClCompile>
+    <ClCompile Include="LapBlend\LapBlend.cpp">
+      <Filter>LapBlend</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="cubilinear\cubilinear.cu" />
+  </ItemGroup>
+</Project>

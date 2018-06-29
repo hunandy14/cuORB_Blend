@@ -10,6 +10,22 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LapBlend\LapBlend.cpp" />
+    <ClCompile Include="orb\orb.cpp" />
+    <ClCompile Include="orb_blend_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cubilinear\cubilinear.hpp" />
+    <ClInclude Include="CudaMem\CudaMem.cuh" />
+    <ClInclude Include="LapBlend\LapBlend.hpp" />
+    <ClInclude Include="OpenBMP\OpenBMP.hpp" />
+    <ClInclude Include="orb\LATCH.h" />
+    <ClInclude Include="orb\orb.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="cubilinear\cubilinear.cu" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8B6442D4-5068-4C35-BC6B-75B85A44E0D2}</ProjectGuid>
     <RootNamespace>cuORB_Blend</RootNamespace>
@@ -68,6 +84,8 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)CudaMem;$(ProjectDir)OpenBMP;$(CudaToolkitIncludeDir);$(ProjectDir)cubilinear</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -84,9 +102,6 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <TargetMachinePlatform>64</TargetMachinePlatform>
     </CudaCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <CudaCompile Include="kernel.cu" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.0.targets" />
